@@ -83,13 +83,6 @@ public struct AnimatedTabBar: View {
                         }
                             .background(ButtonPreferenceViewSetter())
 
-#if swift(>=5.8.1)
-                        if #available(iOS 17.0, *) {
-                            view.animation(.linear) {
-                                $0.foregroundStyle(selectedIndex == i ? selectedColor : unselectedColor)
-                            }
-                        }
-#else
                         view
                             .foregroundStyle(selectedIndex == i ? selectedColor : unselectedColor)
                             .animation(buttonsAnimation, value: selectedIndex)
