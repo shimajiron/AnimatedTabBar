@@ -86,7 +86,6 @@ public struct AnimatedTabBar: View {
                         view
                             .foregroundStyle(selectedIndex == i ? selectedColor : unselectedColor)
                             .animation(buttonsAnimation, value: selectedIndex)
-#endif
                     }
                 }
                 .coordinateSpace(name: buttonsBarSpace)
